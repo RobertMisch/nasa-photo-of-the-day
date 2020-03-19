@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NasaCard from "./NasaCard";
+import { Container, Row } from "reactstrap";
 
 export default function PictureContainer(props){
     const [data, setData] = useState([]);
@@ -23,14 +24,12 @@ export default function PictureContainer(props){
       }
 
       return (
-        //<img src={data.url}/>
-          <NasaCard 
-          title={data.title}
-          date={data.date}
-          image={data.url}
-          explanation={data.explanation}
-          copyright={data.copyright}
-          />
-        //<p>{console.log(data.url)}</p>
+        <NasaCard 
+        title={data.title}
+        date={data.date}
+        image={data.url}
+        explanation={data.explanation}
+        copyright={data.copyright}
+        /> 
       )
 }
